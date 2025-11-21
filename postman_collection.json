@@ -1,0 +1,81 @@
+{
+  "info": {
+    "name": "MiBackend API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Ping",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/ping",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "ping"]
+        }
+      }
+    },
+    {
+      "name": "List Messages",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:3000/api/messages",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "messages"]
+        }
+      }
+    },
+    {
+      "name": "Get Message By Id",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:3000/api/messages/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "messages", "1"]
+        }
+      }
+    },
+    {
+      "name": "Create Message",
+      "request": {
+        "method": "POST",
+        "header": [
+          {"key": "Content-Type", "value": "application/json"}
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"text\": \"Nuevo mensaje desde Postman\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/messages",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "messages"]
+        }
+      }
+    },
+    {
+      "name": "Delete Message",
+      "request": {
+        "method": "DELETE",
+        "url": {
+          "raw": "http://localhost:3000/api/messages/2",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "messages", "2"]
+        }
+      }
+    }
+  ]
+}
